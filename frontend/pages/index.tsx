@@ -71,7 +71,7 @@ export default function Home() {
     setisLoading(true);
     await axios({
       method: "post",
-      url: `http://localhost:4000/v1/getdashboard`,
+      url: `https://backapi.tothestar.com/v1/getdashboard`,
       data: {
         store: store,
         date: date,
@@ -162,7 +162,7 @@ export default function Home() {
   async function getstore(role: any, area: any) {
     await axios({
       method: "post",
-      url: `http://localhost:4000/v1/getstore_dashboard`,
+      url: `https://backapi.tothestar.com/v1/getstore_dashboard`,
       data: {
         role: role,
         store: area,

@@ -32,7 +32,7 @@ export default function Login() {
     setProcessLogin(true);
 
     await axios
-      .post("http://localhost:4000/v1/login", {
+      .post("https://backapi.tothestar.com/v1/login", {
         data: data,
       })
       .then(function (response) {
@@ -110,7 +110,7 @@ export default function Login() {
         setProcessLogin(true);
 
         await axios
-          .post("http://localhost:4000/v1/login_on_enter", {
+          .post("https://backapi.tothestar.com/v1/login_on_enter", {
             username: username,
             password: password,
           })
