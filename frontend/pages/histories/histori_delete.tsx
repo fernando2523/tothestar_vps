@@ -34,7 +34,7 @@ export default function Refund() {
 
     async function getdatarefund(tanggal: any, Store: any, Role: any, area: any, Query: any) {
         await axios
-            .post("https://backapi.tothestarss.com/v1/getdeleteorder", {
+            .post("http://localhost:4000/v1/getdeleteorder", {
                 tanggal: tanggal,
                 store: Store,
                 role: Role,
@@ -72,7 +72,7 @@ export default function Refund() {
     async function getstore(Role: any, area: any) {
         await axios({
             method: "post",
-            url: `https://backapi.tothestarss.com/v1/getstoredisplay`,
+            url: `http://localhost:4000/v1/getstoredisplay`,
             data: {
                 role: Role,
                 store: area,
