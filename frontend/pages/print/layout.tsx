@@ -1,19 +1,18 @@
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-    title: 'CE Print',
-    description: 'Print',
-}
+import Head from 'next/head'
 
 export default function DashboardLayout({
-    children, // will be a page or nested layout
+    children,
 }: {
     children: React.ReactNode
 }) {
-
     return (
-        <div>
-            {children}
-        </div>
+        <>
+            <Head>
+                <title>CE Print</title>
+                <meta name="description" content="Print" />
+            </Head>
+
+            <div>{children}</div>
+        </>
     )
 }

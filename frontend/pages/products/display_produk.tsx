@@ -87,7 +87,7 @@ export default function DaftarProduk() {
         setisLoading(true);
         await axios({
             method: "post",
-            url: `https://backapi.tothestar.com/v1/getprodukdisplay`,
+            url: `https://backapi.tothestarss.com/v1/getprodukdisplay`,
             data: {
                 store: store,
                 query: query,
@@ -113,7 +113,7 @@ export default function DaftarProduk() {
     async function getwarehouse(Role: any, area: any) {
         await axios({
             method: "post",
-            url: `https://backapi.tothestar.com/v1/getwarehousedisplayproduct`,
+            url: `https://backapi.tothestarss.com/v1/getwarehousedisplayproduct`,
             data: {
                 role: Role,
                 store: area,
@@ -131,7 +131,7 @@ export default function DaftarProduk() {
     async function getstore(Role: any, area: any) {
         await axios({
             method: "post",
-            url: `https://backapi.tothestar.com/v1/getstoredisplay`,
+            url: `https://backapi.tothestarss.com/v1/getstoredisplay`,
             data: {
                 role: Role,
                 store: area,
@@ -232,7 +232,7 @@ export default function DaftarProduk() {
     async function getsupplier() {
         await axios({
             method: "get",
-            url: `https://backapi.tothestar.com/v1/getsupplier`,
+            url: `https://backapi.tothestarss.com/v1/getsupplier`,
         })
             .then(function (response) {
                 setdatasupplier(response.data.data_supplier);
@@ -256,7 +256,7 @@ export default function DaftarProduk() {
     async function gethistoripo() {
         await axios({
             method: "get",
-            url: `https://backapi.tothestar.com/v1/gethistoripo`,
+            url: `https://backapi.tothestarss.com/v1/gethistoripo`,
         })
             .then(function (response) {
                 setdatahistorypo(response.data.result);
@@ -281,7 +281,7 @@ export default function DaftarProduk() {
     async function gethistoriso() {
         await axios({
             method: "get",
-            url: `https://backapi.tothestar.com/v1/gethistoriso`,
+            url: `https://backapi.tothestarss.com/v1/gethistoriso`,
         })
             .then(function (response) {
                 setdataso(response.data.result);
@@ -307,7 +307,7 @@ export default function DaftarProduk() {
     async function getcategory() {
         await axios({
             method: "get",
-            url: `https://backapi.tothestar.com/v1/getcategory`,
+            url: `https://backapi.tothestarss.com/v1/getcategory`,
         })
             .then(function (response) {
                 setdatacategory(response.data.data_category);
@@ -331,7 +331,7 @@ export default function DaftarProduk() {
     async function getbrand() {
         await axios({
             method: "get",
-            url: `https://backapi.tothestar.com/v1/getbrand`,
+            url: `https://backapi.tothestarss.com/v1/getbrand`,
         })
             .then(function (response) {
                 setdatabrand(response.data.data_brand);
@@ -403,7 +403,7 @@ export default function DaftarProduk() {
     ) {
 
         await axios
-            .post(`https://backapi.tothestar.com/v1/getsizesales`, {
+            .post(`https://backapi.tothestarss.com/v1/getsizesales`, {
                 idware: id_ware,
                 idproduct: id_produk,
             })
@@ -422,7 +422,7 @@ export default function DaftarProduk() {
 
     const onSubmitUpdate = async (data: any) => {
         await axios
-            .post(`https://backapi.tothestar.com/v1/add_display`, {
+            .post(`https://backapi.tothestarss.com/v1/add_display`, {
                 select_id_produk: data.edit_id_produk,
                 select_warehouse: data.select_warehouse,
                 select_size: data.select_size,
@@ -472,7 +472,7 @@ export default function DaftarProduk() {
         setValue("gudangpengirim", gudang_pengirim);
 
         await axios
-            .post(`https://backapi.tothestar.com/v1/getsizesales`, {
+            .post(`https://backapi.tothestarss.com/v1/getsizesales`, {
                 idware: ware,
                 idproduct: id_produk,
             })
@@ -498,7 +498,7 @@ export default function DaftarProduk() {
             });
         } else {
             await axios
-                .post(`https://backapi.tothestar.com/v1/transferstok`, {
+                .post(`https://backapi.tothestarss.com/v1/transferstok`, {
                     idproduk: idtransferproduct,
                     gudang_pengirim: waretransferproduct,
                     gudang_tujuan: data.transferwaretujuan,
@@ -566,7 +566,7 @@ export default function DaftarProduk() {
         unregister("variasirestock");
 
         await axios
-            .post(`https://backapi.tothestar.com/v1/gethargabeliso`, {
+            .post(`https://backapi.tothestarss.com/v1/gethargabeliso`, {
                 idware: ware,
                 idproduct: id_produk,
             })
@@ -575,7 +575,7 @@ export default function DaftarProduk() {
             });
 
         await axios
-            .post(`https://backapi.tothestar.com/v1/getsizesales`, {
+            .post(`https://backapi.tothestarss.com/v1/getsizesales`, {
                 idware: ware,
                 idproduct: id_produk,
             })
@@ -585,7 +585,7 @@ export default function DaftarProduk() {
             });
 
         await axios
-            .post(`https://backapi.tothestar.com/v1/gethistorisoselected`, {
+            .post(`https://backapi.tothestarss.com/v1/gethistorisoselected`, {
                 idware: ware,
                 idproduct: id_produk,
             })
@@ -613,7 +613,7 @@ export default function DaftarProduk() {
             });
         } else {
             await axios
-                .post(`https://backapi.tothestar.com/v1/stockopname`, {
+                .post(`https://backapi.tothestarss.com/v1/stockopname`, {
                     data: data,
                     users: Name,
                 })
@@ -657,7 +657,7 @@ export default function DaftarProduk() {
         setValue("harga_beli", 0);
         setValue("id_gudang_pengirim", ware);
         setValue("gudang_pengirim", gudang_pengirim);
-        setimg(`https://backapi.tothestar.com/public/images/${img}`);
+        setimg(`https://backapi.tothestarss.com/public/images/${img}`);
         clearErrors();
         settipepo("");
         setValue("tipe_po", "");
@@ -669,7 +669,7 @@ export default function DaftarProduk() {
         unregister("variasirestock");
 
         await axios
-            .post(`https://backapi.tothestar.com/v1/getsizesales`, {
+            .post(`https://backapi.tothestarss.com/v1/getsizesales`, {
                 idware: ware,
                 idproduct: id_produk,
             })
@@ -680,7 +680,7 @@ export default function DaftarProduk() {
             });
 
         await axios
-            .post(`https://backapi.tothestar.com/v1/gethistoriposelected`, {
+            .post(`https://backapi.tothestarss.com/v1/gethistoriposelected`, {
                 idware: ware,
                 idproduct: id_produk,
             })
@@ -709,7 +709,7 @@ export default function DaftarProduk() {
             });
         } else {
             await axios
-                .post(`https://backapi.tothestar.com/v1/repeatstok`, {
+                .post(`https://backapi.tothestarss.com/v1/repeatstok`, {
                     data: data,
                     users: Name,
                 })
@@ -745,7 +745,7 @@ export default function DaftarProduk() {
 
     async function deleteData() {
         await axios
-            .post(`https://backapi.tothestar.com/v1/delete_display`, { id, idware })
+            .post(`https://backapi.tothestarss.com/v1/delete_display`, { id, idware })
             .then(function (response) {
                 loaddataproduk(Store, Query, area, Role, loadmorelimit);
                 getwarehouse(Role, area);
@@ -782,7 +782,7 @@ export default function DaftarProduk() {
                                 <div className="aspect-square max-w-[80px] rounded  items-center">
                                     <Image
                                         className="w-[100%] h-full rounded"
-                                        src={`https://backapi.tothestar.com/public/images/${data_produk.img}`}
+                                        src={`https://backapi.tothestarss.com/public/images/${data_produk.img}`}
                                         alt="product-1"
                                         height="500"
                                         width="500"
@@ -892,7 +892,7 @@ export default function DaftarProduk() {
         setisLoading(true);
         await axios({
             method: "post",
-            url: `https://backapi.tothestar.com/v1/getprodukdisplay`,
+            url: `https://backapi.tothestarss.com/v1/getprodukdisplay`,
             data: {
                 store: Store,
                 query: Query,
@@ -935,7 +935,7 @@ export default function DaftarProduk() {
                 autoClose: 2000,
             });
         } else {
-            // window.open(`https://backapi.tothestar.com/v1/print_stockopname/${warehouse_so}`, '_blank');
+            // window.open(`https://backapi.tothestarss.com/v1/print_stockopname/${warehouse_so}`, '_blank');
             window.open(`/print/${warehouse_so}`);
         }
     }

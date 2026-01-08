@@ -104,7 +104,7 @@ export default function Shipping() {
     setisLoading(true);
     await axios({
       method: "post",
-      url: `https://backapi.tothestar.com/v1/orderresellerpaid`,
+      url: `https://backapi.tothestarss.com/v1/orderresellerpaid`,
       data: {
         status_pesanan: status_pesanan,
         query: query,
@@ -241,7 +241,7 @@ export default function Shipping() {
   async function ordercount(store: any, query: any, date: any, area: any, tipe_sales: any) {
     await axios({
       method: "post",
-      url: `https://backapi.tothestar.com/v1/ordercountresellerpaid`,
+      url: `https://backapi.tothestarss.com/v1/ordercountresellerpaid`,
       data: {
         store: store,
         query: query,
@@ -270,7 +270,7 @@ export default function Shipping() {
   // ) {
   //   await axios({
   //     method: "post",
-  //     url: `https://backapi.tothestar.com/v1/getheaderpesananresellerpaid`,
+  //     url: `https://backapi.tothestarss.com/v1/getheaderpesananresellerpaid`,
   //     data: {
   //       status_pesanan: status_pesanan,
   //       query: query,
@@ -293,7 +293,7 @@ export default function Shipping() {
   async function getwarehouse() {
     await axios({
       method: "get",
-      url: `https://backapi.tothestar.com/v1/getwarehouse`,
+      url: `https://backapi.tothestarss.com/v1/getwarehouse`,
     })
       .then(function (response) {
         setdataware(response.data.data_warehouse);
@@ -318,7 +318,7 @@ export default function Shipping() {
   async function getstore(role: any, area: any) {
     await axios({
       method: "post",
-      url: `https://backapi.tothestar.com/v1/getStore_salesretail`,
+      url: `https://backapi.tothestarss.com/v1/getStore_salesretail`,
       data: {
         role: role,
         store: area,
@@ -421,7 +421,7 @@ export default function Shipping() {
     } else {
       setreturLuarBTN(true);
       await axios
-        .post(`https://backapi.tothestar.com/v1/returLuar`, {
+        .post(`https://backapi.tothestarss.com/v1/returLuar`, {
           LuarProduk: LuarProduk,
           LuarSize: LuarSize,
           LuarOldQty: LuarOldQty,
@@ -543,7 +543,7 @@ export default function Shipping() {
   //     setpilih_warehouse("close");
   //   } else {
   //     await axios
-  //       .post(`https://backapi.tothestar.com/v1/getsizeretur`, {
+  //       .post(`https://backapi.tothestarss.com/v1/getsizeretur`, {
   //         idware: e.target.value,
   //         idproduct: id_produkretur,
   //         size: sizeretur,
@@ -593,7 +593,7 @@ export default function Shipping() {
     id_ware: any
   ) {
     await axios
-      .post(`https://backapi.tothestar.com/v1/cariwaresretur`, {
+      .post(`https://backapi.tothestarss.com/v1/cariwaresretur`, {
         id_ware: id_ware,
       })
       .then(function (response) {
@@ -609,7 +609,7 @@ export default function Shipping() {
     setReturware(id_ware);
 
     await axios
-      .post(`https://backapi.tothestar.com/v1/getsizeretur`, {
+      .post(`https://backapi.tothestarss.com/v1/getsizeretur`, {
         idware: id_ware,
         idproduct: id_produk,
         size: size,
@@ -638,7 +638,7 @@ export default function Shipping() {
   async function sumbitRetur() {
     setIsDisabled(true);
     await axios
-      .post(`https://backapi.tothestar.com/v1/retur`, {
+      .post(`https://backapi.tothestarss.com/v1/retur`, {
         id_pesanan: Id_pesanan,
         id_produk: id_produkretur,
         produk: produkretur,
@@ -701,7 +701,7 @@ export default function Shipping() {
     setbtnrefund(true);
     setIsDisabled(true);
     await axios
-      .post(`https://backapi.tothestar.com/v1/refund`, {
+      .post(`https://backapi.tothestarss.com/v1/refund`, {
         id_produk: id_produkretur,
         produk: addproduk_produk,
         size: addproduk_size,
@@ -758,7 +758,7 @@ export default function Shipping() {
   async function getsupplier() {
     await axios({
       method: "get",
-      url: `https://backapi.tothestar.com/v1/getsupplier`,
+      url: `https://backapi.tothestarss.com/v1/getsupplier`,
     })
       .then(function (response) {
         setdatasupplier(response.data.data_supplier);
@@ -1101,7 +1101,7 @@ export default function Shipping() {
 
   async function updatePesanan(status: any) {
     await axios
-      .post(`https://backapi.tothestar.com/v1/updatepesanan`, {
+      .post(`https://backapi.tothestarss.com/v1/updatepesanan`, {
         id_pesanan: id_pesanan,
         status,
       })
@@ -1122,7 +1122,7 @@ export default function Shipping() {
 
   async function deletePesanan() {
     await axios
-      .post(`https://backapi.tothestar.com/v1/deletepesanan`, {
+      .post(`https://backapi.tothestarss.com/v1/deletepesanan`, {
         id_pesanan: id_pesanan,
         status: tabactive,
         users: Name,

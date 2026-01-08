@@ -43,7 +43,7 @@ export default function Expense() {
         setisLoading(true);
         await axios({
             method: "post",
-            url: `https://backapi.tothestar.com/v1/get_asset`,
+            url: `https://backapi.tothestarss.com/v1/get_asset`,
             data: {
                 id_ware: warehouse,
                 query: query,
@@ -68,7 +68,7 @@ export default function Expense() {
     async function getwarehouse() {
         await axios({
             method: "get",
-            url: `https://backapi.tothestar.com/v1/getwarehouse`,
+            url: `https://backapi.tothestarss.com/v1/getwarehouse`,
         })
             .then(function (response) {
                 setdataware(response.data.data_warehouse);
@@ -155,7 +155,7 @@ export default function Expense() {
         setIDProduct(idproduk);
 
         await axios
-            .post(`https://backapi.tothestar.com/v1/gethistoripoasset`, {
+            .post(`https://backapi.tothestarss.com/v1/gethistoripoasset`, {
                 idware: id_ware,
                 idproduct: idproduk,
             })
@@ -199,7 +199,7 @@ export default function Expense() {
         setisLoading(true);
         await axios({
             method: "post",
-            url: `https://backapi.tothestar.com/v1/get_asset`,
+            url: `https://backapi.tothestarss.com/v1/get_asset`,
             data: {
                 id_ware: Warehouse,
                 query: Query,

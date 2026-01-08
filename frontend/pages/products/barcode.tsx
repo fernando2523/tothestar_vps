@@ -34,7 +34,7 @@ export default function Expense() {
     setisLoading(true);
     await axios({
       method: "post",
-      url: `https://backapi.tothestar.com/v1/getprodukbarcode`,
+      url: `https://backapi.tothestarss.com/v1/getprodukbarcode`,
       data: {
         warehouse: warehouse,
         area: area,
@@ -70,7 +70,7 @@ export default function Expense() {
   async function getwarehouse(role: any, area: any) {
     await axios({
       method: "post",
-      url: `https://backapi.tothestar.com/v1/getarehousebarcode`,
+      url: `https://backapi.tothestarss.com/v1/getarehousebarcode`,
       data: {
         role: role,
         area: area,
@@ -228,7 +228,7 @@ export default function Expense() {
       setpilih_warehouse("close");
     } else {
       await axios
-        .post(`https://backapi.tothestar.com/v1/getsizebarcode`, {
+        .post(`https://backapi.tothestarss.com/v1/getsizebarcode`, {
           idware: PrintIDWare,
           idproduct: PrintIDProduk,
           idpo: e.target.value,
@@ -304,7 +304,7 @@ export default function Expense() {
     setstokReady(0);
 
     await axios
-      .post(`https://backapi.tothestar.com/v1/getidpo`, {
+      .post(`https://backapi.tothestarss.com/v1/getidpo`, {
         idware: idware,
         idproduct: idproduk,
       })

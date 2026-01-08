@@ -53,7 +53,7 @@ export default function MutasiStock() {
     setisLoading(true);
     await axios({
       method: "post",
-      url: `https://backapi.tothestar.com/v1/getmutation`,
+      url: `https://backapi.tothestarss.com/v1/getmutation`,
       data: {
         date: date,
         user_login: user_login,
@@ -505,7 +505,7 @@ export default function MutasiStock() {
   async function settlement_stock(live_stok: any) {
     await axios({
       method: "post",
-      url: `https://backapi.tothestar.com/v1/settlement_stock`,
+      url: `https://backapi.tothestarss.com/v1/settlement_stock`,
       data: {
         live_stok: live_stok,
       },
@@ -532,7 +532,7 @@ export default function MutasiStock() {
   }
 
   // async function settlement_stock() {
-  //     await axios.post(`https://backapi.tothestar.com/v1/settlement_stock/${live_stok}`)
+  //     await axios.post(`https://backapi.tothestarss.com/v1/settlement_stock/${live_stok}`)
   //         .then(function (response) {
   //             console.log(response);
   //             // mutate();

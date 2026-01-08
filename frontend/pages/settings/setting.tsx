@@ -32,7 +32,7 @@ export default function Home() {
     const [Password, setPassword]: any = useState("");
 
     async function updatePass() {
-        await axios.post(`https://backapi.tothestar.com/v1/updatepassword`, {
+        await axios.post(`https://backapi.tothestarss.com/v1/updatepassword`, {
             id: id,
             password: Password,
         }).then(function (response) {
